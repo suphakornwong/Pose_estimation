@@ -54,11 +54,10 @@ def main():
     try:
         model = YOLO(model_path)
         st.sidebar.success("โหลดโมเดล Pose สำเร็จ")
-    except Exception as e:
+    except Exception as e: 
         st.sidebar.error(f"ไม่สามารถโหลดโมเดลได้: {e}")
         return
 
-    # Slider สำหรับปรับ Confidence
     confidence_threshold = st.sidebar.slider(
         "ค่าความเชื่อมั่น (Confidence Threshold)",
         min_value=0.0,
