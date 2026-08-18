@@ -58,6 +58,7 @@ def main():
         st.sidebar.error(f"ไม่สามารถโหลดโมเดลได้: {e}")
         return
 
+    # Slider สำหรับปรับ Confidence						..(40)
     confidence_threshold = st.sidebar.slider(
         "ค่าความเชื่อมั่น (Confidence Threshold)",
         min_value=0.0,
